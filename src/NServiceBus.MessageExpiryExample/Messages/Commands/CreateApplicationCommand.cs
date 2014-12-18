@@ -2,7 +2,7 @@
 
 namespace NServiceBus.MessageExpiryExample.Messages.Commands
 {
-    public class CreateApplicationCommand : ICommand
+    public class CreateApplicationCommand : ITimeToLiveCommand
     {
         public Guid ApplicationId { get; set; }
 
@@ -10,5 +10,6 @@ namespace NServiceBus.MessageExpiryExample.Messages.Commands
 
         public string LastName { get; set; }
 
+        public DateTime TTL { get; set; }
     }
 }

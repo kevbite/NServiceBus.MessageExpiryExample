@@ -52,8 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandHandlers\CreateApplicationCommandHandler.cs" />
+    <Compile Include="CommandHandlers\TimeToLiveCommandHandler.cs" />
     <Compile Include="EndpointConfig.cs" />
     <Compile Include="Messages\Commands\CreateApplicationCommand.cs" />
+    <Compile Include="Messages\Commands\ITimeToLiveCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

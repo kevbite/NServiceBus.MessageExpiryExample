@@ -1,3 +1,5 @@
+using NServiceBus.MessageExpiryExample.CommandHandlers;
+
 namespace NServiceBus.MessageExpiryExample
 {
     public class EndpointConfig : IConfigureThisEndpoint
@@ -7,6 +9,8 @@ namespace NServiceBus.MessageExpiryExample
             configuration.UsePersistence<InMemoryPersistence>();
 
             configuration.UseTransport<RabbitMQTransport>();
+
+            configuration.LoadMessageHandlers<First<TimeToLiveCommandHandler>>();
         }
     }
 }
