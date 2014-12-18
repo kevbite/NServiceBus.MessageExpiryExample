@@ -16,6 +16,8 @@ namespace NServiceBus.MessageExpiryExample.Client
         {
             ConsoleKey? key = null;
 
+            WriteWelcomeMessage();
+
             do
             {
                 if (key == ConsoleKey.C)
@@ -36,7 +38,15 @@ namespace NServiceBus.MessageExpiryExample.Client
                 }
 
                 key = Console.ReadKey().Key;
+                Console.WriteLine();
             } while (key != ConsoleKey.Q);
+        }
+
+        private static void WriteWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to MessageExpiryExample.Client");
+            Console.WriteLine("============================");
+            Console.WriteLine("Press C to Create an Application");
         }
     }
 }
