@@ -1,4 +1,6 @@
-﻿namespace NServiceBus.MessageExpiryExample.Client
+﻿using System;
+
+namespace NServiceBus.MessageExpiryExample.Client
 {
     class Program
     {
