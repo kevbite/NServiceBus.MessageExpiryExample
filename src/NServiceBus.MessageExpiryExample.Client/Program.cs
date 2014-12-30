@@ -14,9 +14,9 @@ namespace NServiceBus.MessageExpiryExample.Client
 
             using (var bus = Bus.CreateSendOnly(configuration))
             {
-                var sagaExampleClient = new MessageExpiryExampleClient(bus);
+                var messageExpiryExampleClient = new MessageExpiryExampleClient(bus);
 
-                sagaExampleClient.Run();
+                messageExpiryExampleClient.Run();
             }
         }
     }
